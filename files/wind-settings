@@ -6,8 +6,6 @@ uci set system.@system[0].timezone=CST-8
 uci set system.@system[0].zonename=Asia/Shanghai
 uci commit system
 
-sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/aria2.lua
-
 #开启nginx
 [ ! -e /usr/bin/wget-ssl  ] && ln -s /usr/bin/wget  /usr/bin/wget-ssl
 [[ ! -e /etc/config/ssl/ca.cer && -d /etc/acme/*.sysblz.com ]] && ln -s /etc/acme/*.sysblz.com/fullchain.cer  /etc/config/ssl/ca.cer
